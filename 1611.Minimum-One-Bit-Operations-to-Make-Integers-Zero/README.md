@@ -21,5 +21,9 @@ Operations mirror the inverse Gray code sequence.
 If you let `ans = 0`, while (n > 0): `ans ^= n; n >>= 1;` then return `ans`.
 
 **Complexity**  
+Solution 1 (python):
+- Time: $O((\log n)^2)$
+- Space: O(log n)
+Solution 2 (TypeScript):
 - Time: O(log n)  
 - Space: O(1)
