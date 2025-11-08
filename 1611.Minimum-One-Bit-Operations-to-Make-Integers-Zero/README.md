@@ -20,10 +20,16 @@ Return the minimum number of operations needed.
 Operations mirror the inverse Gray code sequence.  
 If you let `ans = 0`, while (n > 0): `ans ^= n; n >>= 1;` then return `ans`.
 
-**Complexity**  
-Solution 1 (python):
-- Time: $O((\log n)^2)$
-- Space: O(log n)
-Solution 2 (TypeScript):
-- Time: O(log n)  
-- Space: O(1)
+### 🧮 Complexity
+
+**Solution 1 — Python (Recursive Approach)**  
+- **Time:** O((log n)<sup>2</sup>)  
+- **Space:** O(log n) *(due to recursion stack)*  
+
+**Solution 2 — TypeScript (Iterative Bitwise Approach)**  
+- **Time:** O(log n)  
+- **Space:** O(1)  
+
+#### Notes
+- The recursive Python solution recalculates the highest bit (`k`) in each call, adding an extra log n factor to its runtime.  
+- The iterative TypeScript version performs one XOR + shift per bit, giving O(log n) time and constant space.
